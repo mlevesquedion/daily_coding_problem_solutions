@@ -1,0 +1,11 @@
+[
+  "test_rgb.py::test[arr0-expected0]",
+  "test_rgb.py::test[arr1-expected1]",
+  "test_rgb.py::test[arr2-expected2]",
+  "test_rgb.py::test[arr3-expected3]",
+  "test_rgb.py::test[arr4-expected4]",
+  "test_rgb.py::test[arr5-expected5]",
+  "test_rgb.py::test[arr6-expected6]",
+  "test_rgb.py::test[arr7-expected7]",
+  "test_rgb.py::test[arr8-expected8]"
+]

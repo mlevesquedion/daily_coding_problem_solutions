@@ -1,0 +1,15 @@
+[
+  "test_threebutone.py::test[arr0-19]",
+  "test_threebutone.py::test[arr1-3]",
+  "test_threebutone.py::test[arr2-3]",
+  "test_threebutone.py::test[arr3-3]",
+  "test_threebutone.py::test[arr4-1]",
+  "test_threebutone.py::test[arr5-2]",
+  "test_threebutone.py::test[arr6-4]",
+  "test_twobutone.py::test[arr0-19]",
+  "test_twobutone.py::test[arr1-3]",
+  "test_twobutone.py::test[arr2-3]",
+  "test_twobutone.py::test[arr3-3]",
+  "test_twobutone.py::test[arr4-1]",
+  "test_twobutone.py::test[arr5-2]"
+]
