@@ -3,9 +3,13 @@ from collections import defaultdict
 
 def group(words, prefix_size):
     groups = defaultdict(list)
+    prefixes = []
     for w in words:
-        groups[w[:prefix_size]].append(w)
-    return groups.values()
+        if len(w) < prefix_size:
+            prefixes.append([w])
+        else:
+            groups[w[:prefix_size]].append(w)
+    return prefixes + list(groups.values())
 
 
 def solve(words):
@@ -25,5 +29,5 @@ def solve(words):
 
 
 if __name__ == "__main__":
-    words = 'dog cat car apple apricot fish'.split()
+    words = 'dog cat car apple apple apricot fish'.split()
     print(solve(words))
