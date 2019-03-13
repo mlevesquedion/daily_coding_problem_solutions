@@ -2,3 +2,5 @@
 [0-9]*
 !*.py
 !*.cpp
+.vscode
+a.out
