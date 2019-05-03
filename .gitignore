@@ -3,5 +3,7 @@
 !*.py
 !*.cpp
 !*.hs
+!*.md
 .vscode
 a.out
+target
