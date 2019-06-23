@@ -17,7 +17,7 @@ def k_most_similar_sites(pairs, k):
     for sites_group in by_user:
         site_pairs = combinations(sites_group, 2)
         for site1, site2 in site_pairs:
-            counts[frozenset(sorted([site1, site2]))] += 1
+            counts[''.join(sorted([site1, site2]))] += 1
     print(counts)
     return Counter(counts).most_common(k)
 
