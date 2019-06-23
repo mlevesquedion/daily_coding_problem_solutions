@@ -14,9 +14,8 @@ def k_most_similar_sites(pairs, k):
     for site, user in pairs:
         by_user[user - 1].add(site)
     counts = defaultdict(int)
-    for group in by_user:
-        sites = [p[0] for p in list(group)]
-        site_pairs = combinations(sites, 2)
+    for sites_group in by_user:
+        site_pairs = combinations(sites_group, 2)
         for site1, site2 in site_pairs:
             counts[frozenset(sorted([site1, site2]))] += 1
     print(counts)
