@@ -2,16 +2,15 @@ from collections import Counter
 
 
 def solve(s):
-    counts = Counter(s)
-    arr = [""] * len(s)
-    i = 0
-    for char, count in sorted(
-        counts.items(), key=lambda x: x[1], reverse=True
-    ):
-        for j in range(i, i + count):
-            arr[j] = char
-        i += count
-    return "".join(arr)
+    return "".join(
+        [
+            char
+            for char, count in sorted(
+                Counter(s).items(), key=lambda x: x[1], reverse=True
+            )
+            for _ in range(count)
+        ]
+    )
 
 
 assert solve("tweet") in {"tteew", "eettw"}
