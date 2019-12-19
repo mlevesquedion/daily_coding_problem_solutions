@@ -5,10 +5,13 @@ def sorted_signature(x):
     return tuple(sorted(x))
 
 
-def counted_signature(x):
+def Counter_signature(x):
     return frozenset(Counter(x).items())
 
 
+# For sorted, O([k log k] * n)
+# For Counter, O(kn)
+# In the general case, O(sig(k) * n)
 def solve(array, signature):
     groups = defaultdict(list)
     for x in array:
@@ -17,11 +20,8 @@ def solve(array, signature):
 
 
 expected = [["eat", "ate", "tea"], ["apt", "pat"], ["now"]]
-assert (
-    solve(["eat", "ate", "apt", "pat", "tea", "now"], sorted_signature)
-    == expected
-)
-assert (
-    solve(["eat", "ate", "apt", "pat", "tea", "now"], counted_signature)
-    == expected
-)
+for signature in [sorted_signature, Counter_signature]:
+    assert (
+        solve(["eat", "ate", "apt", "pat", "tea", "now"], signature)
+        == expected
+    )
