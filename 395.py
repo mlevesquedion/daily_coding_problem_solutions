@@ -25,3 +25,12 @@ for signature in [sorted_signature, Counter_signature]:
         solve(["eat", "ate", "apt", "pat", "tea", "now"], signature)
         == expected
     )
+
+# Insight into the solution
+"""
+A signature is a representation that is shared by words that are anagrams of
+each other. For example, all words that are anagrams of each other become the
+same string when sorted, and they have the same character counts (indeed, this
+second example is the definition of an anagram). Therefore grouping the words
+by their signatures produces the groups of anagrams.
+"""
